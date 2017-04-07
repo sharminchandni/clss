@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>class3</title>
+  </head>
+  <body>
+
+<!-- Small modal -->
+
+<div class="modal fade click" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+    <div class="modal-body text-center">
+    	<p class="Clock"></p>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+
+function Clck(){
+	var a=new Date();
+	var Time=a.ToLocalestring();
+	document.getElementById("Clock").innerHTML=Time ;
+}
+SetInterval(
+	function (){
+		 Clck();
+
+	}
+	,1000);
+
+setTimeout(
+	function(){
+			$('.click').modal('show') ;
+		} ,1000);
+	
+
+
+  
+</script>
+
+</body>
+</html>
